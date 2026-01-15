@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/ninja-naruto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Escheley</title>
+</head>
+
+<header class="cabecalho">
+
+    <nav class="cabecalho__link">
+
+        <a class="cabecalho__link__link" href="index.html">Home</a>
+        <a class="cabecalho__link__link" href="sobremim.html">Sobre Mim</a>
+
+    </nav>
+
+</header>
+
+<body>
+
+    <main class="container">
+
+        <section class="container__conteudo">
+
+            <h1>Bem vindo ao <strong>Mundo da Escheley</strong></h1>
+
+            <p>
+                Esse projeto esta sendo desenvolvido para a Escheley
+            </p>
+
+            <p>
+                Projeto para mostrar ao mundo as habilidades e a arte produzidas por Escheley ao mundo dos Cosplays
+            </p>
+
+        </section>
+
+        <div class="conteudo__imagem">
+            <div class="imagem-container">
+                <img class="imagem" src="assets/madaraicon.jpeg" alt="Icone da Deusa">
+                <img class="imagem-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHR2NjlqOGpnbDA5Zm9hNm9qaWQ5b2VucXFmOTNydDV2enEwYzY2MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7nnxnehOcvnoc/giphy.gif" alt="Efeito">
+            </div>
+
+            <p class="conteudo__frase">Uma combinacao de <strong>Poder</strong> e <strong>Determinacao</strong>, Pronta
+                para conquistar o mundo</p>
+
+            <a class='conteudo__saiba'id="link" class="conteudo__link" href="https://www.instagram.com/esch_cosplayer/">
+                <img src="assets/insta.png" alt="Clique para acessar" width="8%">
+                Instagram Cosplays
+            </a>
+
+            <a class='conteudo__saiba'id="link" class="conteudo__link" href="https://www.tiktok.com/@escheleycosplay?_r=1&_t=ZS-936VyTJ8Ua1">
+                <img src="assets/tiktok.png" alt="Clique para acessar" width="8%">
+                TikTok
+            </a>
+
+            <a class='conteudo__saiba'id="link" class="conteudo__link" href="https://www.instagram.com/escheley_mgc/">
+                <img src="assets/insta.png" alt="Clique para acessar" width="8%">
+                Instagram Pessoal
+            </a>
+
+
+        </div>
+
+        <div id="overlay">
+            <img src="assets/corrida.gif" alt="Carregando">
+        </div>
+
+        <script>
+            const link = document.getElementById("link");
+            const overlay = document.getElementById("overlay");
+
+            if (link) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault(); // impede navegação imediata
+                    overlay.classList.add("ativo");
+
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 1500); // tempo do gif
+                });
+            }
+        </script>
+
+    </main>
+
+</body>
+
+</html>

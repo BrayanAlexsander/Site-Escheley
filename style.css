@@ -1,0 +1,291 @@
+@import url('https://fonts.cdnfonts.com/css/ninja-naruto');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Ninja Naruto', sans-serif;
+    background-image: url(assets/BackGround.jpg);
+    background-size: cover;
+}
+
+.cabecalho {
+    display: flex;
+    padding: 2% 0% 0% 10%;
+}
+
+.cabecalho__link {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 80px;
+    font-size: 2rem;
+}
+
+.cabecalho__link__link {
+    text-decoration: none;
+    color: red;
+}
+
+.container {
+    font-size: 2rem;
+    padding: 2% 0% 0% 10%;
+    display: flex;
+    color: black;
+}
+
+.container__conteudo h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container__conteudo strong {
+    color: red;
+}
+
+.container__conteudo p {
+    text-align: left;
+    align-items: column;
+    margin: 20px 20px 20px 20px;
+}
+
+.imagem-container {
+    position: relative;
+    width: 75%;
+    border: 2px solid red;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.imagem {
+    width: 100%;
+    display: block;
+    transition: opacity 0.6s ease;
+    cursor: pointer;
+}
+
+.imagem-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.imagem-container:hover .imagem {
+    opacity: 0;
+}
+
+.imagem-container:hover .imagem-gif {
+    opacity: 1;
+}
+
+.conteudo__imagem {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    margin-left: 36%;
+}
+
+.conteudo__frase {
+    margin-top: 10px;
+    flex-direction: column;
+    font-size: 26px;
+    color: white;
+}
+
+.conteudo__frase strong {
+    color: red;
+}
+
+.conteudo__saiba {
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 2% 2% 2% 2%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.conteudo__saiba img {
+    margin-right: 10px;
+}
+
+.conteudo__saiba:hover {
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#overlay.ativo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* RESPONSIVIDADE PARA TABLETS (768px e abaixo) */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .cabecalho {
+        padding: 3% 5% 0% 5%;
+        justify-content: center;
+    }
+
+    .cabecalho__link {
+        gap: 30px;
+        font-size: 1.5rem;
+    }
+
+    .cabecalho__link__link {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 3% 5% 0% 5%;
+        font-size: 1.5rem;
+    }
+
+    .container__conteudo h1 {
+        font-size: 1.8rem;
+    }
+
+    .container__conteudo p {
+        font-size: 1rem;
+        margin: 15px 10px;
+    }
+
+    .conteudo__imagem {
+        margin-left: 0;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .imagem-container {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .conteudo__frase {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .conteudo__saiba {
+        width: 90%;
+        max-width: 350px;
+        padding: 3% 3%;
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .conteudo__saiba img {
+        width: 15px !important;
+    }
+}
+
+/* RESPONSIVIDADE PARA CELULARES (480px e abaixo) */
+@media (max-width: 480px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .cabecalho {
+        padding: 4% 5% 0% 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cabecalho__link {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 1.2rem;
+    }
+
+    .cabecalho__link__link {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 4% 5% 0% 5%;
+        font-size: 1rem;
+    }
+
+    .container__conteudo h1 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .container__conteudo p {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+    .conteudo__imagem {
+        margin-left: 0;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .imagem-container {
+        width: 95%;
+        max-width: 300px;
+    }
+
+    .conteudo__frase {
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 15px;
+        padding: 0 10px;
+    }
+
+    .conteudo__saiba {
+        width: 90%;
+        max-width: 280px;
+        padding: 4% 3%;
+        font-size: 0.9rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+
+    .conteudo__saiba img {
+        width: 12px !important;
+        margin-right: 8px;
+    }
+}
+
+
