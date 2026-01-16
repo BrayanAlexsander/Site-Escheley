@@ -3,13 +3,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Ninja Naruto', sans-serif;
     background-image: url(assets/BackGround.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .cabecalho {
@@ -31,7 +33,7 @@ body {
 
 .container {
     font-size: 1.4rem;
-    padding: 2% 0% 0% 10%;
+    padding: 2% 10%;
     display: flex;
     align-items: left;
     justify-content: left;
@@ -54,16 +56,14 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: flex-start;
     justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
-.galeria img {
-    justify-content: flex-start;
+.galeria > div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -95,4 +95,130 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+}
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+    .cabecalho__link {
+        gap: 40px;
+        font-size: 1.5rem;
+    }
+
+    .container {
+        font-size: 1.2rem;
+        padding: 2% 5%;
+    }
+
+    .cosplayimg {
+        width: 200px;
+        height: 280px;
+    }
+
+    .galeria p {
+        font-size: 0.9rem;
+        max-width: 200px;
+    }
+
+    .container__conteudo p {
+        font-size: 1rem;
+    }
+}
+
+/* ===== MOBILE (480px - 768px) ===== */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 3% 5% 0% 5%;
+    }
+
+    .cabecalho__link {
+        gap: 20px;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+
+    .container__conteudo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container__conteudo h2 {
+        font-size: 1.2rem;
+    }
+
+    .container__conteudo p {
+        font-size: 0.9rem;
+    }
+
+    .galeria {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .cosplayimg {
+        width: 180px;
+        height: 250px;
+    }
+
+    .galeria p {
+        font-size: 0.85rem;
+        max-width: 180px;
+    }
+}
+
+/* ===== CELULAR PEQUENO (até 480px) ===== */
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 4% 5% 0% 5%;
+    }
+
+    .cabecalho__link {
+        gap: 15px;
+        font-size: 1rem;
+    }
+
+    .container {
+        font-size: 0.9rem;
+        padding: 4% 5%;
+    }
+
+    .container__conteudo h1 {
+        font-size: 1.3rem;
+    }
+
+    .container__conteudo h2 {
+        font-size: 1.1rem;
+    }
+
+    .container__conteudo p {
+        font-size: 0.8rem;
+    }
+
+    .galeria {
+        gap: 10px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cosplayimg {
+        width: 150px;
+        height: 210px;
+    }
+
+    .galeria > div {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .galeria p {
+        font-size: 0.8rem;
+        max-width: 150px;
+    }
+
+    .conteudo__text {
+        font-size: 0.9rem;
+    }
 }

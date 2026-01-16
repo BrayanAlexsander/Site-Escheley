@@ -120,20 +120,104 @@
     line-height: 1.6;
 }
 
-/* Responsivo */
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+    .modal-conteudo {
+        max-width: 95%;
+    }
+
+    .modal-info {
+        flex: 0 0 300px;
+    }
+
+    .modal-sinopse {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .modal-sinopse h2 {
+        font-size: 20px;
+    }
+
+    .modal-sinopse p {
+        font-size: 14px;
+    }
+}
+
+/* ===== MOBILE (768px) ===== */
 @media (max-width: 768px) {
+    .modal-conteudo {
+        max-width: 95%;
+        height: 95vh;
+    }
+
     .modal-corpo {
         flex-direction: column;
     }
 
+    .modal-imagem-container {
+        flex: 1;
+        min-height: 50%;
+        padding: 10px;
+    }
+
     .modal-info {
-        flex: 0 0 45%;
+        flex: 0 0 auto;
         border-left: none;
         border-top: 1px solid #e5e5e5;
     }
 
+    .modal-sinopse {
+        padding: 15px 15px;
+        gap: 12px;
+    }
+
+    .modal-sinopse h2 {
+        font-size: 18px;
+    }
+
+    .modal-sinopse p {
+        font-size: 13px;
+    }
+
+    .modal-fechar {
+        font-size: 28px;
+        right: 10px;
+        top: 10px;
+    }
+}
+
+/* ===== CELULAR PEQUENO (480px) ===== */
+@media (max-width: 480px) {
     .modal-conteudo {
-        max-width: 95%;
-        height: 95vh;
+        max-width: 98%;
+        height: 98vh;
+        border-radius: 8px;
+    }
+
+    .modal-imagem-container {
+        min-height: 45%;
+        padding: 5px;
+    }
+
+    .modal-sinopse {
+        padding: 12px 12px;
+        gap: 10px;
+        max-height: 55vh;
+    }
+
+    .modal-sinopse h2 {
+        font-size: 16px;
+    }
+
+    .modal-sinopse p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .modal-fechar {
+        font-size: 24px;
+        right: 8px;
+        top: 8px;
     }
 }
