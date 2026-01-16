@@ -131,18 +131,6 @@ body {
     transition: 0.4s;
 }
 
-#overlay {
-  position: fixed;
-  inset: 0;
-  background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
 #overlay.ativo {
   opacity: 1;
   pointer-events: all;

@@ -65,28 +65,6 @@
 
         </div>
 
-        <div id="overlay">
-            <img src="assets/corrida.gif" alt="Carregando">
-        </div>
-
-        <script>
-            const link = document.getElementById("link");
-            const overlay = document.getElementById("overlay");
-
-            if (link) {
-                link.addEventListener("click", function (e) {
-                    e.preventDefault(); // impede navegação imediata
-                    overlay.classList.add("ativo");
-
-                    setTimeout(() => {
-                        window.location.href = this.href;
-                    }, 1500); // tempo do gif
-                });
-            }
-        </script>
-
     </main>
-
 </body>
-
 </html>
