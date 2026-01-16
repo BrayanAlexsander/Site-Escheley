@@ -1,0 +1,98 @@
+@import url('https://fonts.cdnfonts.com/css/ninja-naruto');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Ninja Naruto', sans-serif;
+    background-image: url(assets/BackGround.jpg);
+    background-size: cover;
+}
+
+.cabecalho {
+    display: flex;
+    padding: 2% 0% 0% 10%;
+}
+
+.cabecalho__link {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 80px;
+    font-size: 2rem;
+}
+
+.cabecalho__link__link {
+    text-decoration: none;
+    color: red;
+}
+
+.container {
+    font-size: 1.4rem;
+    padding: 2% 0% 0% 10%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    color: black;
+}
+.container__conteudo h1 {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}   
+.container__conteudo h2 {
+    color: red;
+    margin-top: 20px;
+}
+
+.galeria {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.galeria img {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cosplayimg {
+    cursor: pointer;
+    width: 250px;
+    height: 350px;
+    border: 2px solid red;
+    border-radius: 20px;
+    transition: transform 0.2s;
+    object-fit: cover;
+}
+
+.cosplayimg:hover {
+    transform: scale(1.05);
+}
+
+.galeria p {
+    font-size: 1rem;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 250px;
+}
+
+.conteudo__text {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}

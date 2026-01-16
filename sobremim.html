@@ -1,22 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalhos e Projetos</title>
-    
+    <link rel="stylesheet" href="sobremim.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-    <head>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Sobre Mim</a>
+    <header class="cabecalho">
+        <nav class="cabecalho__link">
+            <a class="cabecalho__link__link" href="index.html">Home</a>
+            <a class="cabecalho__link__link" href="sobremim.html">Sobre Mim</a>
         </nav>
-    </head>
+    </header>
     
-    <main>
+    <main class="container">
 
-    </main>
+        <section class="container__conteudo">
+            <h1>Trabalhos e Projetos de Escheley</h1>
+            <p>Escheley tem se dedicado a criar cosplays incríveis e participar de eventos relacionados à cultura pop. Aqui estão alguns dos seus trabalhos e projetos mais notáveis</p>
+            
+            <h2>Galeria de Fotos</h2>
+            <p>Aqui estão algumas fotos dos trabalhos recentes de Escheley:</p>
+            <div class="galeria">
+                <div> 
+                    <img class="cosplayimg" src="assets/madaraicon.jpeg" alt="Cosplay 1" 
+                         data-title="Cosplay de Madara Uchiha"
+                         data-descricao="Escute... Neste mundo, sempre que houver uma luz, haverá também sombras. Enquanto o conceito de vencedores existir também deve haver perdedores. O desejo egoísta de querer manter a paz provoca guerras e o ódio nasce para proteger o amor."
+                         onclick="abrirModal(this)">
+                    <p class="conteudo__text">Madara Uchiha</p>
+
+                    <img class="cosplayimg" src="assets/Kaguya.png" alt="Cosplay 2" 
+                         data-title="Cosplay da Kaguya Ōtsutsuki"
+                         data-descricao="A princesa Kaguya Ootsutsuki é a matriarca do clã Ootsutsuki e mãe de Hagoromo Ootsutsuki e Hamura Ootsutsuki, que viveu muito antes da fundação das aldeias ocultas, durante uma era de guerras intermináveis entre a humanidade."
+                         onclick="abrirModal(this)">
+                    <p class="conteudo__text">Kaguya Ōtsutsuki</p>
+                </div>
+
+                <div>
+                    <img class="cosplayimg" src="assets/sasuke.png" alt="Cosplay 3" 
+                         data-title="Cosplay de Sasuke Uchiha (Classico)"
+                         data-descricao="Esqueça, você precisa esquecer essa vingança. Aqueles que seguem o caminho da vingança nunca acabam bem. Você só se destrói e, mesmo que tenha sucesso, o que sobrará? Nada. Um vazio."
+                         onclick="abrirModal(this)">
+                    <p>Cosplay de Sasuke Uchiha (Classico)</p>
+                </div>
+
+            </div>
+            
+            <h2>Contato para Colaborações</h2>
+            <p>Se você está interessado em colaborar com Escheley em futuros projetos ou eventos, sinta-se à vontade para entrar em contato através das redes sociais listadas na página inicial.</p>
+        </section>
     
+    </main>
+
+    <!-- Modal Cosplay -->
+    <div id="modalInstagram" class="modal-instagram">
+        <div class="modal-conteudo">
+            <button class="modal-fechar" onclick="fecharModal()">&times;</button>
+            
+            <div class="modal-corpo">
+                <div class="modal-imagem-container">
+                    <img id="modalImagem" src="" alt="Cosplay">
+                </div>
+                
+                <div class="modal-info">
+                    <div class="modal-sinopse">
+                        <h2 id="modalTitulo">Cosplay</h2>
+                        <p id="modalDescricao">Descrição do cosplay aparecerá aqui</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="modal.js"></script>
+
 </body>
+
 </html>
