@@ -34,7 +34,7 @@ body {
     font-size: 2rem;
     padding: 2% 0% 0% 10%;
     display: flex;
-    color: black;
+    color: rgb(214, 206, 206);
 }
 
 .container__conteudo h1 {
